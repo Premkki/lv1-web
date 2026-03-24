@@ -159,6 +159,26 @@
   background-color: var(--color-shooter);
 }
 
+/* Histogram grafikon - prikazuje se na manjim ekranima */
+.bar-chart {
+  display: none;
+  align-items: flex-end;
+  gap: 10px;
+  height: 200px;
+  margin-top: 30px;
+}
+
+.bar {
+  width: 40px;
+  border-radius: 8px 8px 0 0;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.bar:hover {
+  transform: scale(1.1);
+}
+
 /*Na manjim ekranima prikazuj histogram umjesto donut grafikona */
 @media (max-width: 768px) {
   .chart-section {
@@ -227,22 +247,3 @@ footer {
   text-align: center;
 }
 
-/* Histogram grafikon - prikazuje se na manjim ekranima */
-.bar-chart {
-  display: none;
-  align-items: flex-end;
-  gap: 10px;
-  height: 200px;
-  margin-top: 30px;
-}
-
-.bar {
-  width: 40px;
-  border-radius: 8px 8px 0 0;
-  box-shadow: var(--shadow);
-  transition: transform 0.3s ease;
-}
-
-.bar:hover {
-  transform: scale(1.1);
-}
