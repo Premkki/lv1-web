@@ -39,6 +39,7 @@ header p {
 .menu-wrapper {
   position: relative;
   display: inline-block;
+  padding-bottom: 5px;
 }
 
 .menu-button {
@@ -64,7 +65,7 @@ header p {
   margin: 0;
   padding: 0;
   position: absolute;
-  top: 110%;
+  top: 100%;
   left: 0;
   min-width: 180px;
   background-color: white;
