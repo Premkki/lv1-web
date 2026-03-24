@@ -175,6 +175,8 @@
   border-radius: 8px 8px 0 0;
   box-shadow: var(--shadow);
   transition: transform 0.3s ease;
+  transform-origin: bottom;
+  animation: growBar 1s ease-out;
 }
 
 .bar:hover {
@@ -204,6 +206,17 @@
   }
   to {
     transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes growBar {
+  from {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  to {
+    transform: scaleY(1);
     opacity: 1;
   }
 }
