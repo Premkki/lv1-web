@@ -18,11 +18,6 @@
   --shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-body {
-  font-family: var(--main-font);
-  background-color: var(--main-bg);
-}
-
 .dropdown-nav {
   position: relative;
   display: inline-block;
@@ -164,15 +159,19 @@ body {
   background-color: var(--color-shooter);
 }
 
+/*Na manjim ekranima prikazuj histogram umjesto donut grafikona */
 @media (max-width: 768px) {
   .chart-section {
     flex-direction: column;
     align-items: flex-start;
   }
 
+  .bar-chart {
+    display: flex;
+  }
+
   .donut-chart {
-    width: 250px;
-    height: 250px;
+    display: none;
   }
 }
 
@@ -228,13 +227,22 @@ footer {
   text-align: center;
 }
 
-/*Na manjim ekranima prikazuj histogram umjesto donut grafikona */
-@media (max-width: 768px) {
-  .donut-chart {
-    display: none;
-  }
+/* Histogram grafikon - prikazuje se na manjim ekranima */
+.bar-chart {
+  display: none;
+  align-items: flex-end;
+  gap: 10px;
+  height: 200px;
+  margin-top: 30px;
+}
 
-  .bar-chart {
-    display: flex;
-  }
+.bar {
+  width: 40px;
+  border-radius: 8px 8px 0 0;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.bar:hover {
+  transform: scale(1.1);
 }
