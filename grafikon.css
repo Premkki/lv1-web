@@ -227,3 +227,14 @@ footer {
   border-radius: 12px;
   text-align: center;
 }
+
+/*Na manjim ekranima prikazuj histogram umjesto donut grafikona */
+@media (max-width: 768px) {
+  .donut-chart {
+    display: none;
+  }
+
+  .bar-chart {
+    display: flex;
+  }
+}
